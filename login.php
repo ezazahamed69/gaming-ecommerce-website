@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
 include 'config.php';
-?> -->
+?>
 
 <!doctype html>
 <html lang="en">
@@ -47,22 +47,22 @@ include 'config.php';
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
-<!-- <?php 
+<?php 
 if(isset($_POST['login']))
 {        
     $query = "SELECT * FROM `users` WHERE `email`='$_POST[email]' AND `password`='$_POST[password]'";
     $result = mysqli_query($conn,$query);
     if(mysqli_num_rows($result)==1){
         session_start();
-        $_SESSION['AdminName'] = $_POST['name'];
-        header("location: http://localhost/Final%20Project./index.php");
+        $_SESSION['AdminName'] = $_POST['email'];
+        header("location: http://localhost/gaming-ecommerce-website/home.html");
     }
     else{
         echo "<script> alert('Invalid Credentials'); </script>";
     }
 }        
 
-?> -->
+?>
 
 
   </body>
