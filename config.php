@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','gshop') or die('connection failed');
+$conn = mysqli_connect('localhost','root','','gamesshop') or die('connection failed');
 
 ?>

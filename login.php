@@ -55,7 +55,7 @@ if(isset($_POST['login']))
     if(mysqli_num_rows($result)==1){
         session_start();
         $_SESSION['AdminName'] = $_POST['email'];
-        header("location: http://localhost/gaming-ecommerce-website/home.html");
+        header("location: http://localhost/gaming-ecommerce-website/home.php");
     }
     else{
         echo "<script> alert('Invalid Credentials'); </script>";

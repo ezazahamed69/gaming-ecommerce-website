@@ -33,7 +33,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: url("/assets/images/addproduct.jpg");
+    background-image: url("../images/addproduct.jpg");
     background-position: center;
     background-size:cover;
 
@@ -87,3 +87,10 @@ select{
     color:white;
 }
  
+input#img, #submit.button , #product-name, #product-price, 
+#product-category ,#product-description{
+    transform: skewX(-20deg);
+}
+fieldset {
+    padding: 20px;
+}
