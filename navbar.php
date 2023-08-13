@@ -29,6 +29,9 @@
             <li class="navbar-item">
               <a href="#" class="navbar-link skewBg" data-nav-link>Contact</a>
             </li>
+            <li class="navbar-item">
+              <a href="./login.php" class="navbar-link skewBg" data-nav-link>Log out</a>
+            </li>
 
           </ul>
         </nav>
@@ -41,9 +44,9 @@
             <span class="cart-badge">0</span>
           </button>
 
-          <button class="search-btn" aria-label="open search" data-search-toggler>
+          <!-- <button class="search-btn" aria-label="open search" data-search-toggler>
             <ion-icon name="search-outline"></ion-icon>
-          </button>
+          </button> -->
 
           <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
             <ion-icon name="menu-outline" class="menu"></ion-icon>
