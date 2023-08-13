@@ -88,7 +88,7 @@ select{
 }
  
 input#img, #submit.button , #product-name, #product-price, 
-#product-category ,#product-description{
+#product-category{
     transform: skewX(-20deg);
 }
 fieldset {
