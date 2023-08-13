@@ -271,7 +271,7 @@ textarea.input100 {
     display: flex;
     justify-content: space-between;
 }
-
+ /* buttons */
 .container-contact100-form-btn input {
     background-color: #5f3dad;
     transform: skewX(-20deg);
