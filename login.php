@@ -37,7 +37,7 @@ include 'config.php';
                 <input class="contact100-form-btn" type="submit" name="login" value="login">
             </div>
             <div class="container-contact100-form-btn">
-               <button class="contact100-form-btn"> Admin login </button>
+            <input class="contact100-form-btn" type="submit" name="adminlogin" value="Admin login">
             </div>
         </div>
         </form>
@@ -60,7 +60,22 @@ if(isset($_POST['login']))
     else{
         echo "<script> alert('Invalid Credentials'); </script>";
     }
-}        
+}   
+
+if(isset($_POST['adminlogin']))
+{        
+    $query = "SELECT * FROM `admin` WHERE `username`='$_POST[email]' AND `pass`='$_POST[password]'";
+    $result = mysqli_query($conn,$query);
+    if(mysqli_num_rows($result)==1){
+        session_start();
+        $_SESSION['AdminName'] = $_POST['name'];
+        header("location: ./showOrder.php");
+    }
+    else{
+        
+        echo "<script> alert('Invalid Credentials'); </script>";
+    }
+}  
 
 ?>
 

@@ -16,10 +16,15 @@
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
     <title>Add A Product</title>
     <link rel="stylesheet" href="./assets/css/addproduct.css">
+    <link rel="stylesheet" href="./assets/css/navStyle.css">
+
   </head>
   <body>
-
+  <?php
+    include 'adminnavbar.php';
+?>
     <div class="container-fluid py-3">
+
     <header class="text-left">
         
     <h2 class="display-6">Add A Product</h2>
