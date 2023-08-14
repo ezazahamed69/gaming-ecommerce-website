@@ -52,8 +52,8 @@
                 </select>
             </fieldset>
             <fieldset>
-                <label>Description</label>
-                <textarea id="product-description" class="form-control" name="product_description" rows="5" required></textarea>  
+                <label>Product Description</label>
+                <textarea id="product-description" class="form-control" name="product_description" rows="8" required></textarea>  
             </fieldset>
             <fieldset>
             <label>Product Image</label><br>
