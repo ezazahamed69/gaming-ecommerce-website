@@ -1,3 +1,4 @@
+
 <?php
 include 'config.php';
 
@@ -25,26 +26,18 @@ if(isset($_POST['add_to_cart'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        <?php include 'css/slick.css'; ?>
-        <?php include 'css/slick-theme.css'; ?>
-        /*  */
-        <?php include './assets/css/shop.css'; ?>
+        <?php include './assets/css/shop.css'; 
+        ?>
     </style>
+    <!--- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   </head>
   <body>
-
-<?php
-if(isset($message)){
-   foreach($message as $message){
-      echo '<div class="message"><span>'.$message.'</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
-   };
-};
-?> 
-
-
-<!-- <?php include 'navbar.php'; ?> -->
-
-
+  <!-- <?php include 'navbar.php'; ?> -->
 <section class="products">
 
    <h1 class="heading">Buy your favourite games</h1>
@@ -52,7 +45,6 @@ if(isset($message)){
         <div class="shopBox">
 
             <?php
-            
             $select_products = mysqli_query($conn, "SELECT * FROM `products`");
             if(mysqli_num_rows($select_products) > 0){
                 while($fetch_product = mysqli_fetch_assoc($select_products)){
@@ -62,10 +54,6 @@ if(isset($message)){
             ?>
             <form action="" method="post">
                 <div class="shopbox-contents">
-                    <?php
-                     
-                     
-                    ?>
                     
                     <div class="fetchImg">
                     <?php echo '<img src="data:image;base64,'.base64_encode($fetch_product['image']).'" alt="" style="width:100%;">'; ?></h3>
@@ -79,12 +67,10 @@ if(isset($message)){
                     <input type="submit" class="btn" value="ADD" name="add_to_cart">
                 </div>
             </form>
-
-            <?php
-                };
+            <?php 
+            };
             };
             ?>
-
         </div>
    </div>
 </section>
@@ -99,5 +85,9 @@ if(isset($message)){
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="swiper-bundle.min.js"></script>
+  
   </body>
 </html>
