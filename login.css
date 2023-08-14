@@ -284,6 +284,13 @@ textarea.input100 {
     border-radius: 0px;
     font-weight: 800;
 }
+ /* button button */
+/* .container-contact100-form-btn button {
+    background-color: #5f3dad;
+    transform: skewX(-20deg);
+    border-radius: 0px;
+    font-weight: 800;
+} */
 .container-contact100-form-btn input:hover {
     background-color: #fff ;
     color: #5f3dad;
