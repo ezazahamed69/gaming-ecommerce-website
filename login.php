@@ -3,50 +3,61 @@ include 'config.php';
 ?>
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./login.css">
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
     <title>User Login</title>
-  </head>
-  <body>
-  <div class="container-contact100">
-    <div class="wrap-contact100">
-        <form class="contact100-form validate-form" method="post">
-            <span class="contact100-form-title">
-                User Login Dashboard
-            </span>
+</head>
 
-            <div class="wrap-input100 validate-input" data-validate="Please enter email">
-                <input class="input100" type="email" name="email" placeholder="Email" required>
-                <span class="focus-input100"></span>
-            </div>
+<body>
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form" method="post">
+                <span class="contact100-form-title">
+                    User Login Dashboard
+                </span>
 
-            <div class="wrap-input100 validate-input" data-validate="Please enter password">
-                <input class="input100" type="text" name="password" placeholder="Password" required>
-                <span class="focus-input100"></span>
-            </div>
-<div class="btn-div">
-            <div class="container-contact100-form-btn">
-                <input class="contact100-form-btn" type="submit" name="login" value="login">
-            </div>
-            <div class="container-contact100-form-btn">
-            <input class="contact100-form-btn" type="submit" name="adminlogin" value="Admin login">
-            </div>
+                <div class="wrap-input100 validate-input" data-validate="Please enter email">
+                    <input class="input100" type="email" name="email" placeholder="Email" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Please enter password">
+                    <input class="input100" type="text" name="password" placeholder="Password" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="btn-div">
+                    <div class="container-contact100-form-btn">
+                        <input class="contact100-form-btn" type="submit" name="login" value="login">
+                    </div>
+                    <div class="container-contact100-form-btn">
+                        <input class="contact100-form-btn" type="submit" name="adminlogin" value="Admin login">
+                    </div>
+                </div>
+
+            </form>
+            <div class="regdiv">
+                    <button class="regbtn">
+                        <a href="./regform.php"> Register </a>
+                    </button>
+                </div>
         </div>
-        </form>
-    </div>
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-<?php 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <?php 
 if(isset($_POST['login']))
 {        
     $query = "SELECT * FROM `users` WHERE `email`='$_POST[email]' AND `password`='$_POST[password]'";
@@ -70,14 +81,15 @@ if(isset($_POST['adminlogin']))
         $_SESSION['AdminName'] = $_POST['name'];
         header("location: ./showOrder.php");
     }
-    else{
-        
-        echo "<script> alert('Invalid Credentials'); </script>";
-    }
+        else{
+            
+            echo "<script> alert('Invalid Credentials'); </script>";
+                 }
 }  
 
 ?>
 
 
-  </body>
+</body>
+
 </html>

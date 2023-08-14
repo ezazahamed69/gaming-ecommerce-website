@@ -1,5 +1,5 @@
 /* This is google font */
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0px;
@@ -12,7 +12,7 @@ html {
     height: 100%;
     font-family: 'Oxanium', cursive;
     font-size: 35px;
-    
+
 }
 
 a {
@@ -138,7 +138,7 @@ iframe {
     padding: 15px;
     position: relative;
     z-index: 1;
-    
+
 }
 
 .container-contact100::before {
@@ -151,7 +151,7 @@ iframe {
     top: 0;
     left: 0;
     pointer-events: none;
-    background-image: url("./assets/images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.jpg");
 }
 
 .contact100-map {
@@ -165,12 +165,10 @@ iframe {
 
 .wrap-contact100 {
     width: 800px;
-    background-image: url("./assets/images/fontaine.jpg");
-   
+    background-image: url("../images/fontaine.jpg");
     border-radius: 10px;
     overflow: hidden;
     padding: 72px 150px 25px 150px;
-
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -211,7 +209,7 @@ iframe {
     font-family: 'Oxanium', cursive;
     font-size: 16px;
     color: #4b2354;
-    line-height: 1.2;    
+    line-height: 1.2;
 }
 
 
@@ -267,68 +265,44 @@ textarea.input100 {
     padding-top: 10px;
     padding-bottom: 43px;
 }
+
 .btn-div {
     display: flex;
     justify-content: space-between;
 }
- /* buttons */
+
+/* buttons */
 .container-contact100-form-btn input {
     background-color: #5f3dad;
     transform: skewX(-20deg);
     border-radius: 0px;
     font-weight: 800;
 }
+
 .container-contact100-form-btn button {
     background-color: #5f3dad;
     transform: skewX(-20deg);
     border-radius: 0px;
     font-weight: 800;
 }
- /* button button */
+
+/* button button */
 /* .container-contact100-form-btn button {
     background-color: #5f3dad;
     transform: skewX(-20deg);
     border-radius: 0px;
     font-weight: 800;
 } */
-.regdiv {
-    display: flex;
-    justify-content: center;
-}
-.regbtn {
-    background-color: #5f3dad;
-    transform: skewX(-20deg);
-    border-radius: 0px;
-    font-weight: 800;
-}
-.regbtn:hover {
-    background-color: #fff ;
+.container-contact100-form-btn input:hover {
+    background-color: #fff;
     color: #5f3dad;
     transform: skewX(-20deg);
     border-radius: 0px;
     font-weight: 800;
 }
-.regbtn a {
-    text-decoration:  none;
-    margin: 10px 20px;
-    color: #fff;
-}
-.regbtn a:hover {
-    background-color: #fff ;
-    color: #5f3dad;
-    transform: skewX(-20deg);
-    border-radius: 0px;
-    font-weight: 800;
-}
-.container-contact100-form-btn input:hover { 
-    background-color: #fff ;
-    color: #5f3dad;
-    transform: skewX(-20deg);
-    border-radius: 0px;
-    font-weight: 800;
-}
+
 .container-contact100-form-btn button:hover {
-    background-color: #fff ;
+    background-color: #fff;
     color: #5f3dad;
     transform: skewX(-20deg);
     border-radius: 0px;
@@ -453,4 +427,3 @@ textarea.input100 {
         right: 10px;
     }
 }
-
