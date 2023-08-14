@@ -151,7 +151,7 @@ iframe {
     top: 0;
     left: 0;
     pointer-events: none;
-    background-image: url("./assets/images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.jpg");
 }
 
 .contact100-map {
@@ -165,12 +165,10 @@ iframe {
 
 .wrap-contact100 {
     width: 800px;
-    background-image: url("./assets/images/fontaine.jpg");
-   
+    background-image: url("../images/fontaine.jpg");
     border-radius: 10px;
     overflow: hidden;
     padding: 72px 150px 25px 150px;
-
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
