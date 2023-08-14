@@ -7,7 +7,7 @@
           <ul class="navbar-list">
 
             <li class="navbar-item">
-              <a href="#home" class="navbar-link skewBg" data-nav-link>Home</a>
+              <a href="./home.php" class="navbar-link skewBg" data-nav-link>Home</a>
             </li>
 
             <li class="navbar-item">
@@ -19,7 +19,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#shop" class="navbar-link skewBg" data-nav-link>Shop</a>
+              <a href="./shop.php" class="navbar-link skewBg" data-nav-link>Shop</a>
             </li>
 
             <li class="navbar-item">

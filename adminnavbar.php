@@ -1,5 +1,4 @@
-
-    <nav>
+<nav>
         <ul>
         <li><a href="showOrder.php">Orders</a></li>
         <li><a href="addProduct.php">Add Product</a></li>
