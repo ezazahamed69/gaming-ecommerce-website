@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Aug 15, 2023 at 01:00 PM
+-- Host: 127.0.0.1
+-- Generation Time: Aug 14, 2023 at 07:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gameshop`
+-- Database: `gamesshop`
 --
 
 -- --------------------------------------------------------
@@ -29,17 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `username` varchar(30) NOT NULL,
-  `pass` varchar(30) NOT NULL,
-  `id` int(11) NOT NULL
+  `pass` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`username`, `pass`, `id`) VALUES
-('Ezaz@gmail.com', '1234', 1),
-('Tasin', '1234', 2);
+INSERT INTO `admin` (`username`, `pass`) VALUES
+('Chillpill', 'justDoit'),
+('tasin@gmail.com', 'tasin');
 
 -- --------------------------------------------------------
 
@@ -74,7 +73,6 @@ INSERT INTO `cart` (`id`, `price`, `qty`, `image`, `name`, `remove_id`) VALUES
 --
 
 CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `number` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
@@ -89,8 +87,13 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `name`, `number`, `email`, `method`, `qty`, `address`, `total_products`, `total_price`) VALUES
-(1, 'Ezaz', '100', 'ezaz@gmail.com', 'COD', 2, 'bashundhara r/a', 1, '367.00');
+INSERT INTO `orders` (`name`, `number`, `email`, `method`, `qty`, `address`, `total_products`, `total_price`) VALUES
+('James', '01554574525', 'blah@gmail.com', 'cash on delivery', NULL, 'Sector#14, Road#19, House#23, Uttara,Dhaka', 0, '357.00'),
+('King', '122575533', 'kjahush@kaha.com', 'credit cart', NULL, 'kjadsjdasjkdajhdasjhdhjask', 0, '278.00'),
+('Muhtasim Ibteda Shochcho', '291012010829', 'sho25100@gmail.com', 'paypal', NULL, 'Sector#14, Road#19, House#23, Uttara,Dhaka', 0, '14.00'),
+('Muhtasim Ibteda Shochcho', '893291298', 'sho25100@gmail.com', 'cash on delivery', NULL, 'Sector#14, Road#19, House#23, Uttara,Dhaka', 0, '9.00'),
+('Muhtasim Ibteda Shochcho', '012586645', 'sho25100@gmail.com', 'cash on delivery', NULL, 'Sector#14, Road#19, House#23, Uttara,Dhaka', 0, NULL),
+('James Bond', '25544584', 'blah@gmail.com', 'cash on delivery', NULL, 'Sector#14, Road#19, House#23, Uttara,Dhaka', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -152,21 +155,9 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
 --
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -186,22 +177,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
