@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="./contact.css">
+     
         
 
         <!-- <script defer src="./static/js/account_dropdown.js"></script>
@@ -13,14 +13,26 @@
         <title>Contact us</title>
         <!-- <link rel="stylesheet" href="./assets/css/navstyle.css"> -->
         <link rel="stylesheet" href="./assets/css/style.css">
-        
+        <link rel="stylesheet" href="./contact.css">
+        <style>
+    .header-bottom {
+    position: relative;
+    top: calc(100% - 1px);
+    left: 0;
+    width: 100%;
+    background-color: var(--raisin-black-2);
+    padding-block: 20px;
+    z-index : 0;
+  }
+        </style>
     </head>
 
     <body>
-        <main>
-        <?php
+    <?php
         include 'navbar.php';
     ?>
+        <main>
+
             <div class="title">Contact us</div>
             <div class="title-info">We'll get back to you soon!</div>
 
@@ -50,6 +62,12 @@
                 </div>
         
             </form>
+            <?php
+        include 'footer.php';
+    ?>
         </main>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="swiper-bundle.min.js"></script>
     </body>
 </html>

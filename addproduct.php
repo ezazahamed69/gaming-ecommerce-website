@@ -1,3 +1,7 @@
+<?php
+    include 'config.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,7 +27,43 @@
   <?php
     include 'adminnavbar.php';
 ?>
-    <div class="container-fluid py-3">
+
+<?php
+include 'config.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['img']) && isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_description'])) {
+        $img = $_POST['img'];
+        $pName = $_POST['product_name'];
+        $price = $_POST['product_price'];
+        $des = $_POST['product_description'];
+
+        // // Check if the 'product_category' key exists before accessing it
+        // $cat = isset($_POST['product_category']) ? $_POST['product_category'] : '';
+
+        $statement = "INSERT INTO products(name,image,price,product_details) 
+                      VALUES('$pName', '$img','$price','$des')";
+
+        if (mysqli_query($conn, $statement)) {
+            session_start();
+            // echo "<script> alert('Product Added'); </script>";
+        } else {
+            // Handle the database insertion error
+            echo "<script>alert('Product addition failed.');</script>";
+        }
+
+        mysqli_close($conn);
+    } else {
+        // Handle missing or undefined keys in the $_POST array
+        echo "<script>alert('Please fill in all required fields.');</script>";
+    }
+}
+?>
+
+
+
+
+<div class="container-fluid py-3">
 
     <header class="text-left">
         

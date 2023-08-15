@@ -27,7 +27,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link skewBg" data-nav-link>Contact</a>
+              <a href="contact.php" class="navbar-link skewBg" data-nav-link>Contact</a>
             </li>
             <li class="navbar-item">
               <a href="./login.php" class="navbar-link skewBg" data-nav-link>Log out</a>

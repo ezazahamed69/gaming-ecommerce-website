@@ -35,9 +35,22 @@ if(isset($_POST['add_to_cart'])){
   <link
     href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+    <title> Shop, Your game </title>
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <style>
+          .header-bottom {
+    position: relative;
+    top: calc(100% - 1px);
+    left: 0;
+    width: 100%;
+    background-color: var(--raisin-black-2);
+    padding-block: 20px;
+    z-index : 0;
+  }
+    </style>
   </head>
   <body>
-  <!-- <?php include 'navbar.php'; ?> -->
+  <?php include 'navbar.php'; ?>
 <section class="products">
 
    <h1 class="heading">Buy your favourite games</h1>
@@ -63,7 +76,7 @@ if(isset($_POST['add_to_cart'])){
                     <div class="price"><h3>$<?php echo $fetch_product['price']; ?></h3></div>
                     <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
                     <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-                    <input type="hidden" name="product_image" value="<?php echo '<img src="data:image;base64,'.base64_encode($fetch_product['image']).' " alt="" style="width:100px;height=100px;' ?>">
+                    <input type="hidden" name="product_image" value="<?php echo '<img src="data:image;base64,'.base64_encode($fetch_product['image']).' " alt="" style="width:100px;height:100px;' ?>">
                     <input type="submit" class="btn" value="ADD" name="add_to_cart">
                 </div>
             </form>
@@ -83,7 +96,7 @@ if(isset($_POST['add_to_cart'])){
 <!-- footer section ends -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
-    <script src="js/slick.min.js"></script>
+
     <script src="js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
