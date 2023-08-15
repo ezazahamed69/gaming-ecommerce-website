@@ -32,36 +32,33 @@
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['img']) && isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_description'])) {
-        $img = $_POST['img'];
+    if (isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_description']) && isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
         $pName = $_POST['product_name'];
         $price = $_POST['product_price'];
         $des = $_POST['product_description'];
+        
+        // Handle image upload
+        $imgData = file_get_contents($_FILES['img']['tmp_name']);
 
-        // // Check if the 'product_category' key exists before accessing it
-        // $cat = isset($_POST['product_category']) ? $_POST['product_category'] : '';
+        // Use prepared statement to insert image binary data into the database
+        $statement = $conn->prepare("INSERT INTO products(name, image, price, product_details) VALUES(?, ?, ?, ?)");
+        $statement->bind_param("ssds", $pName, $imgData, $price, $des);
 
-        $statement = "INSERT INTO products(name,image,price,product_details) 
-                      VALUES('$pName', '$img','$price','$des')";
-
-        if (mysqli_query($conn, $statement)) {
+        if ($statement->execute()) {
             session_start();
-            // echo "<script> alert('Product Added'); </script>";
+            echo "<script> alert('Product Added'); </script>";
         } else {
-            // Handle the database insertion error
+            // Handle insertion error
             echo "<script>alert('Product addition failed.');</script>";
         }
 
-        mysqli_close($conn);
+        $statement->close();
     } else {
-        // Handle missing or undefined keys in the $_POST array
+        // Handle missing or incomplete form data
         echo "<script>alert('Please fill in all required fields.');</script>";
     }
 }
 ?>
-
-
-
 
 <div class="container-fluid py-3">
 
@@ -73,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <section class="container glass my-2 w-50 text-light p-2">
         <div class="text-center">
-        <form action="addProduct.php" method="post">
+        <form action="addProduct.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <label>Product Name</label>
                 <input type="text" id="product-name" name="product_name" required>
@@ -98,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <fieldset>
             <label>Product Image</label><br>
                 <input type="file" id="img" name="img" accept="image/*">
-                </fieldset>  
+            </fieldset>  
             <input class="button" id="submit" type="submit" value="Add Product">
             </form>
         </div>
