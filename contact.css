@@ -17,7 +17,7 @@ main
     font-size: 50px;
     font-weight: bold;
     padding: 1.5% 0;
-    color: #69f0ae;
+    color: #5f3dad;
 }
 .header-bottom {
     position: static;
@@ -95,26 +95,34 @@ textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
     color: rgb(34, 99, 156);
 }
 
-button
-{
-    padding: 2%;
+button{
+     padding: 2%;
     width: 28%;
     border: 1px solid;
-    border-color: #e5d4d4;
+    /* border-color: #e5d4d4;
     border-radius: 5px;
     font-family: inherit;
     font-size: 18px;
     background-color: paleturquoise;
     color: inherit;
     border-radius: 20px 30px 30px;
-    box-shadow: 2px 3px 10px #212121;
+    box-shadow: 2px 3px 10px #212121; */
+
+    background-color: #5f3dad;
+    transform: skewX(-20deg);
+    border-radius: 0px;
+    font-weight: 800;
 }
 
 button:hover
 {
-    background-color: #b81d1d;
-    color: #69f0ae;
-    cursor: pointer;
+     
+        background-color: #fff ;
+        color: #5f3dad;
+        transform: skewX(-20deg);
+        border-radius: 0px;
+        font-weight: 800;
+        cursor: pointer;
 }
 
 
