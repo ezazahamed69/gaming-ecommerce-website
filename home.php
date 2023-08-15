@@ -10,6 +10,7 @@
   <title>G-Shop -Explore a wide range of authentic and quality products
   </title>
   <!-- favicon -->
+  
   <link rel="shortcut icon" href="./fav.png" type="image/svg+xml">
 
   <!-- custom css link-->
