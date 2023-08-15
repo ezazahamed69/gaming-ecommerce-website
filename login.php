@@ -42,13 +42,10 @@ include 'config.php';
                         <input class="contact100-form-btn" type="submit" name="adminlogin" value="Admin login">
                     </div>
                 </div>
-
+                <div class="container-contact100-form-btn">
+                        <input class="contact100-form-btn" type="submit" id="reg" value="Register">
+                    </div>
             </form>
-            <div class="regdiv">
-                    <button class="regbtn">
-                        <a href="./regform.php"> Register </a>
-                    </button>
-                </div>
         </div>
     </div>
 
@@ -56,6 +53,15 @@ include 'config.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+        <script>
+        // JavaScript code to handle button click
+        const regButton = document.getElementById('reg');
+        
+        regButton.addEventListener('click', function() {
+            window.location.href = 'regform.php';
+        });
+    </script>
+
 
     <?php 
 if(isset($_POST['login']))

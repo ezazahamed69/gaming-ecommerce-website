@@ -11,11 +11,16 @@
         <script defer src="./static/js/burger_menu_dropdown.js"></script> -->
 
         <title>Contact us</title>
+        <!-- <link rel="stylesheet" href="./assets/css/navstyle.css"> -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        
     </head>
 
     <body>
-
         <main>
+        <?php
+        include 'navbar.php';
+    ?>
             <div class="title">Contact us</div>
             <div class="title-info">We'll get back to you soon!</div>
 
