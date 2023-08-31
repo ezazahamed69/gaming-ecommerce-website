@@ -19,7 +19,7 @@ if(isset($_POST['order_btn'])){
          $product_name[] = $product_item['name'] .' ('. $product_item['qty'] .') ';
          $product_price = number_format($product_item['price'] * $product_item['qty']);
          $price_total += $product_price;
-         // $total_products += $product_count;
+         
       };
    };
 
