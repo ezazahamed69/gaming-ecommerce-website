@@ -44,7 +44,7 @@
           Exclusive August flash sell Offer <span class="span skewBg">16</span> Days
         </div> -->
         <div class="countdown-text">
-          Exclusive August flash sell Offer <span class="span skewBg" id="countdown"></span>
+          Exclusive September flash sell Offer <span class="span skewBg" id="countdown"></span>
         </div>
         
         
