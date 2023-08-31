@@ -85,7 +85,11 @@ if(isset($_POST['order_btn'])){
     <div class="container">
 
         <section class="checkout-form">
-
+            <style>
+            .heading {
+                margin-top: 5rem;
+            }
+</style>
             <h1 class="heading">Fill out the form for confirmation</h1>
 
             <form action="" method="post">
@@ -107,11 +111,14 @@ if(isset($_POST['order_btn'])){
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
+      
                     <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
                 </div>
-                <div class="flex">
+
+                <!-- <div class="details">
+            
                     <div class="inputBox">
-                        <span>name</span>
+                        <span>Name</span>
                         <input type="text" placeholder="Full Name" name="name" required>
                     </div>
                     <div class="inputBox">
@@ -134,11 +141,78 @@ if(isset($_POST['order_btn'])){
                         <span>Address </span>
                         <input type="text" placeholder="Delivery Address" name="address" required>
                     </div>
-                </div>
+                </div> -->
+                
+    <style>
+        .details {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .inputBox {
+            margin-bottom: 10px;
+        }
+
+        .inputBox span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .inputBox input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn{
+            background-color: #5f3dad;
+            }
+        
+
+    </style>
+    <div class="details">
+
+    <div class="inputBox">
+        <span>Name</span>
+        <input type="text" placeholder="Full Name" name="name" required>
+    </div>
+    <div class="inputBox">
+        <span>Number</span>
+        <input type="text" placeholder="Contact Number" name="number" required>
+    </div>
+    <div class="inputBox">
+        <span>Email</span>
+        <input type="email" placeholder="Email Address" name="email" required>
+    </div>
+    <div class="inputBox">
+        <span>Payment method</span>
+        <select name="method">
+            <option value="cash on delivery" selected>Cash On Devlivery</option>
+            <option value="credit cart">Credit Cart</option>
+            <option value="paypal">Paypal</option>
+            <option value="bkash">Bkash</option>
+            <option value="nagad">Nagad</option>
+        </select>
+    </div>
+    <div class="inputBox">
+        <span>Address </span>
+        <input type="text" placeholder="Delivery Address" name="address" required>
+    </div>
+</div>
                 <input type="submit" value="order now" name="order_btn" class="btn">
             </form>
         </section>
     </div>
+    
     <?php include 'footer.php'; ?>
 </body>
 
