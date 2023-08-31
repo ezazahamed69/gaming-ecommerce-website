@@ -52,10 +52,12 @@ if ($count_query) {
         <!-- cart-badge -->
         <div class="header-actions">
 
-        <a href="./cart.php" class="cart-btn" aria-label="cart">
+        <form action="./cart.php" method="get">
+        <button class="cart-btn" aria-label="cart">
           <ion-icon name="cart"></ion-icon>
           <span class="cart-badge"><?php echo $total_items; ?></span>
-
+        </button>
+        </form>
           <!-- <button class="search-btn" aria-label="open search" data-search-toggler>
             <ion-icon name="search-outline"></ion-icon>
           </button> -->
