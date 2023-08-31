@@ -1,3 +1,17 @@
+<?php
+include 'config.php'; 
+
+// Fetch the count of items in the cart table
+$count_query = mysqli_query($conn, "SELECT COUNT(*) as total_items FROM cart");
+if ($count_query) {
+    $count_result = mysqli_fetch_assoc($count_query);
+    $total_items = $count_result['total_items'];
+} else {
+    $total_items = 0; // Default value if there's an error
+}
+
+?>
+
 <div class="header-bottom skewBg" data-header>
       <div class="container">
 
@@ -38,11 +52,9 @@
         <!-- cart-badge -->
         <div class="header-actions">
 
-          <button class="cart-btn" aria-label="cart">
-            <ion-icon name="cart"></ion-icon>
-
-            <span class="cart-badge">0</span>
-          </button>
+        <a href="./cart.php" class="cart-btn" aria-label="cart">
+          <ion-icon name="cart"></ion-icon>
+          <span class="cart-badge"><?php echo $total_items; ?></span>
 
           <!-- <button class="search-btn" aria-label="open search" data-search-toggler>
             <ion-icon name="search-outline"></ion-icon>

@@ -410,7 +410,7 @@ body {
 }
 
 .header-bottom {
-  position: absolute;
+  /* position: absolute; */
   top: calc(100% - 1px);
   left: 0;
   width: 100%;
@@ -420,7 +420,7 @@ body {
 }
 
 .header-bottom.active {
-  position: fixed;
+  /* position: fixed; */
   top: -85px;
   animation: slideIn 0.5s var(--cubic-out) forwards;
 }
