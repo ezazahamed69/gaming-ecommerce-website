@@ -16,6 +16,7 @@ $result=mysqli_query($conn, $statement);
     <link rel="shortcut icon" href="fav.png" type="image/x-icon">
 </head>
 <body>
+
 <?php
     include 'adminnavbar.php';
 ?>

@@ -1,14 +1,56 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;1,300&family=Source+Sans+Pro:wght@200&family=Ubuntu&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games?styles=17672');
+/* Color Variable  */
+:root {
+    --eerie-black-1: hsl(277, 25%, 10%);
+    --raisin-black-2: hsl(236, 17%, 17%);
+    --english-violet: hsl(274, 21%, 23%);
+    
+    --white: hsl(0, 0%, 100%);
+    --main-color: #fa5353;
+    --second-color: #5f3dad;
+    --dark-color: #181b2b;
+    --light-color: #322f40;
+    --text-color: hsl(0, 0%, 91%);
+    --ff-oxanium: 'Oxanium', cursive;
+    --ff-poppins: 'Poppins', sans-serif;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
 * {
   font-family: 'Oxanium', cursive;
   box-sizing: border-box;
   margin: 0;
   padding:0;
 }
+html {
+  font-family: var(--ff-poppins);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url("../images/addproduct.jpg");
+  background-position: center;
+  background-size:cover;
 
+
+  font-size: 2rem;
+  line-height: 1.5;
+  color: white;
+  font-family: var(--ff-oxanium);
+}
 table {
     border-collapse: collapse;
     margin: 0 auto;
     text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
   }
   
 h2{

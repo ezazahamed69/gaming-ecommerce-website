@@ -767,7 +767,7 @@ body {
 }
 
 .live-match-time {
-  color: var(--xiketic);
+  color: var(--marigold);
   font-size: var(--fs-1);
   font-weight: var(--fw-700);
   max-width: max-content;

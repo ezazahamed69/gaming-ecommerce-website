@@ -1,6 +1,6 @@
 <nav>
         <ul>
-        <li><a href="showOrder.php">Orders</a></li>
+        <li><a href="showOrder.php">Pending Orders</a></li>
         <li><a href="addProduct.php">Add Product</a></li>
         <li>
             <form method="post">
