@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Oxanium', cursive;
+}
+
 html {
   margin: 0;
-  font-family: Arial, sans-serif;
+  
   background-image: url("assets/images/Gamer-como.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +24,7 @@ html {
 
 .sidebar-header {
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
   padding-bottom: 20px;
   border-bottom: 1px solid #555;
 }
@@ -30,7 +36,7 @@ html {
 
 .sidebar-menu li {
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar-menu li a {
@@ -54,7 +60,7 @@ html {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:left;
 }
 
 .navbar-title {

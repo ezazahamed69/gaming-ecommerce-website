@@ -8,7 +8,9 @@ include 'config.php';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="admin.css" />
+    
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -33,10 +35,10 @@ include 'config.php';
           <a href="addproduct.php"><i class="bx bxs-book-add"></i>Add Products</a>
         </li>
         <li>
-          <a href="calender.html"><i class="bx bxs-calendar"></i>Calendar</a>
+          <a href="showOrder.php"><i class="bx bx-edit-alt"></i>Invoice</a>
         </li>
         <li>
-          <a href="showOrder.php"><i class="bx bx-edit-alt"></i>Invoice</a>
+          <a href="calender.html"><i class="bx bxs-calendar"></i>Calendar</a>
         </li>
         <li>
           <a href="settings.php"><i class="bx bxs-cog"></i>Settings</a>

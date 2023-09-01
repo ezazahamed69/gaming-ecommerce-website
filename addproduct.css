@@ -33,7 +33,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: url("../images/addproduct.jpg");
+    background-image: url("assets/images/Gamer-como.jpg");
     background-position: center;
     background-size:cover;
 
@@ -42,6 +42,8 @@ body {
     color: white;
     font-family: var(--ff-oxanium);
 }
+
+
 h2{
     font-size: 35px;
     color:azure;

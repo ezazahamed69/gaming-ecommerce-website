@@ -19,17 +19,18 @@
     rel="stylesheet">
     <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
     <title>Add A Product</title>
-    <link rel="stylesheet" href="./assets/css/addproduct.css">
-    <link rel="stylesheet" href="./assets/css/navStyle.css">
+    <link rel="stylesheet" href="adminSideNav.css">
+    <link rel="stylesheet" href="addproduct.css">
+    
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 
   </head>
   <body>
-  <?php
-    include 'adminnavbar.php';
-?>
-
+  
 <?php
 include 'config.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_description']) && isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
@@ -59,9 +60,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
+    <nav class="navbar">
+      <h1 class="navbar-title"><a href="index.php"><i class="bx bxs-dashboard"></a></i> Dashboard</h1>
+      </div>
+      <div class="user-profile">
+        <img src="assets/images/userP.jpg" alt="User Profile" />
+        <i class="bx bxs-bell-ring"></i>
+      </div>
+    </nav>
+    <div class="sidebar">
+      <ul class="sidebar-menu">
+        <li>
+          <a href="addproduct.php"><i class="bx bxs-book-add"></i>Add Products</a>
+        </li>
+        <li>
+          <a href="showOrder.php"><i class="bx bx-edit-alt"></i>Invoice</a>
+        </li>
+        <li>
+          <a href="calender.html"><i class="bx bxs-calendar"></i>Calendar</a>
+        </li>
+        <li>
+          <a href="settings.php"><i class="bx bxs-cog"></i>Settings</a>
+        </li>
+        <li>
+        <a href="login.php"><i class="bx bx-log-out-circle"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  
     
-    <h2><b>Add A Product</b></h2>
+    <h2 class="text-center py-5"><b>Add A Product</b></h2>
     <section class="container glass my-2 w-50 text-light p-2">
         <div class="text-center">
         <form action="addProduct.php" method="post" enctype="multipart/form-data">

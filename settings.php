@@ -106,10 +106,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                                         type="text" class="form-control" name="region"
                                                                         value="" placeholder="region"></div>
                                                 </div>
-                                                <div class="mt-5 text-center"><button
+                                                <div class="row mt-3">
+                                                <div class="col-md-6"><a class="btn btn-primary" href="index.php" role="button">Back</a></div>
+
+                                                <div class="col-md-6"><button
                                                                 class="btn btn-primary profile-button"
                                                                 type="submit">Save
                                                                 Profile</button></div>
+                                                </div>
                                         </form>
                                 </div>
                         </div>

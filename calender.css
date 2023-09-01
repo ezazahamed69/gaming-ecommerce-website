@@ -130,7 +130,7 @@ header .current-date {
 }
 
 /* Style for the Add Event button */
-.add-event-button {
+.button {
   background-color: #9259b6;
   color: #574261;
   border: none;
@@ -140,7 +140,7 @@ header .current-date {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.add-event-button:hover {
+.button:hover {
   background-color: #9c5fb4;
   transform: scale(1.05);
 }

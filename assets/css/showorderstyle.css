@@ -34,19 +34,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url("../images/addproduct.jpg");
+  background-image: url("../images/Gamer-como.jpg");
   background-position: center;
   background-size:cover;
-
-
-  font-size: 2rem;
   line-height: 1.5;
   color: white;
   font-family: var(--ff-oxanium);
 }
 table {
+    
     border-collapse: collapse;
-    margin: 0 auto;
+    margin-left: 240px;
     text-align: center;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Oxanium', cursive;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0);
+    color: #fff;
+    padding-top: 20px;
+    position:fixed;
+    
+  }
+  
+  .sidebar-header {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+
+    
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+   
+    
+
+  }
+  
+  .sidebar-menu li {
+    padding: 10px;
+    text-align:left;
+
+   
+  }
+  
+  .sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+   
+  }
+  
+  .sidebar-menu li a:hover {
+    background-color: rgba(137, 43, 226, 0.022);
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .navbar {
+    background-color: rgba(137, 43, 226, 0.022);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.navbar-title {
+  margin: 0;
+}
+.navbar-title a{
+    color: white;
+}
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
