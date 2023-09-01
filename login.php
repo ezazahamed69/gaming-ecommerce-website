@@ -85,7 +85,7 @@ if(isset($_POST['adminlogin']))
     if(mysqli_num_rows($result)==1){
         session_start();
         $_SESSION['AdminName'] = $_POST['name'];
-        header("location: ./showOrder.php");
+        header("location: ./index.php");
     }
         else{
             
