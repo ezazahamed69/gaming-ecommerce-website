@@ -33,11 +33,11 @@ if ($count_query) {
             </li>
 
             <li class="navbar-item">
-              <a href="./shop.php" class="navbar-link skewBg" data-nav-link>Shop</a>
+              <a href="#blog" class="navbar-link skewBg" data-nav-link>Blog</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#blog" class="navbar-link skewBg" data-nav-link>Blog</a>
+              <a href="./shop.php" class="navbar-link skewBg" data-nav-link>Shop</a>
             </li>
 
             <li class="navbar-item">
