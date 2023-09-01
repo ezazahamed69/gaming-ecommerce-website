@@ -36,10 +36,11 @@ if(isset($_GET['delete_all'])){
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+       <?php include './assets/css/style.css' ?>
+        <?php include './assets/css/page.css'; ?>
         <?php include 'css/slick.css'; ?>
         <?php include 'css/slick-theme.css'; ?>
-        <?php include './assets/css/style.css' ?>
-        <?php include './assets/css/page.css'; ?>
+       
         <?php include './assets/css/navStyle.css' ?>
     </style>
 
@@ -52,17 +53,17 @@ if(isset($_GET['delete_all'])){
 
    <section class="shopping-cart">
 
-      <h1 class="heading">Your Cart</h1>
+      <h1 class="heading py-3">Your Cart</h1>
 
       <table>
 
          <thead>
-            <th>image</th>
-            <th>name</th>
-            <th>price</th>
-            <th>quantity</th>
-            <th>total price</th>
-            <th>action</th>
+            <th>SL.</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Action</th>
          </thead>
 
          <tbody>
@@ -115,5 +116,7 @@ if(isset($_GET['delete_all'])){
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
