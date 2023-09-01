@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+    
+    <?php include './assets/css/style.css'?>
+    <?php include './assets/css/page.css';?>
+    <?php include 'css/slick.css';?>
+    <?php include 'css/slick-theme.css';?>
+    </style>
+</head>
+
+<body>
+    <?php include 'navbar.php'; ?>
+
 <?php
 
 include 'config.php';
@@ -30,24 +52,28 @@ if(isset($_POST['order_btn'])){
       echo "
       <style>
       .order-message-container {
-         display : flex;
-         justify-content : center;
-         align-items: center;
+        
+        display: flex;
+        justify-content:center;
+        align-items: center;
+      }
+      .order-message-container h3{
+        font-size: 30px;
       }
       </style>
-      <div class='order-message-container'>
+      <div class='order-message-container py-5'>
       <div class='message-container'>
-         <h3>thank you for shopping!</h3>
+         <h3>Thank you for shopping!</h3>
          <div class='order-detail'>
            
-            <span class='total'> total : $".$price_total."/-  </span>
+            <span class='total text-center'><b>Grand Total : $".$price_total."/-  </b></span>
          </div>
          <div class='customer-details'>
-            <p> your name : <span>".$name."</span> </p>
-            <p> your number : <span>".$number."</span> </p>
-            <p> your email : <span>".$email."</span> </p>
-            <p> your address : <span>".$address."</span> </p>
-            <p> your payment mode : <span>".$method."</span> </p>
+            <p><b> Customer name : </b><span>".$name."</span> </p>
+            <p><b>Contact number : </b><span>".$number."</span> </p>
+            <p><b>Your E-mail : </b><span>".$email."</span> </p>
+            <p><b>Shipping Address : </b><span>".$address."</span> </p>
+            <p><b>Payment Mode : </b><span>".$method."</span> </p>
             
          </div>
             <a href='shop.php' class='btn'>Done</a>
@@ -60,98 +86,76 @@ if(isset($_POST['order_btn'])){
 }
 
 ?>
+<div class="container">
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<section class="checkout-form">
     <style>
-    
-    <?php include './assets/css/style.css'?>
-    <?php include './assets/css/page.css';?>
-    <?php include 'css/slick.css';?>
-    <?php include 'css/slick-theme.css';?>
-    </style>
-</head>
-
-<body>
-    <?php include 'navbar.php'; ?>
-
-    <div class="container">
-
-        <section class="checkout-form">
-            <style>
-            .heading {
-                margin-top: 5rem;
-            }
+    .heading {
+        margin-top: 5rem;
+    }
 </style>
-            <h1 class="heading">Fill out the form for confirmation</h1>
+    <h1 class="heading">Fill out the form for confirmation</h1>
 
-            <form action="" method="post">
+    <form action="" method="post">
 
-                <div class="display-order">
-                    <?php
-         $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
-         $total = 0;
-         $grand_total = 0;
-         if(mysqli_num_rows($select_cart) > 0){
-            while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-            $total_price = number_format($fetch_cart['price'] * $fetch_cart['qty']);
-            $grand_total = $total += $total_price;
-      ?>
-            <h4><?= $fetch_cart['name']; ?> <span><?= $fetch_cart['qty']; ?></span></h4>
+        <div class="display-order">
             <?php
-         }
-      }else{
-         echo "<div class='display-order'><span>your cart is empty!</span></div>";
-      }
-      ?>
-      
-                    <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
-                </div>
-                
-    <style>
-        .details {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
+ $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
+ $total = 0;
+ $grand_total = 0;
+ if(mysqli_num_rows($select_cart) > 0){
+    while($fetch_cart = mysqli_fetch_assoc($select_cart)){
+    $total_price = number_format($fetch_cart['price'] * $fetch_cart['qty']);
+    $grand_total = $total += $total_price;
+?>
+    <h4><?= $fetch_cart['name']; ?> <span><?= $fetch_cart['qty']; ?></span></h4>
+    <?php
+ }
+}else{
+ echo "<div class='display-order'><span>your cart is empty!</span></div>";
+}
+?>
 
-        .inputBox {
-            margin-bottom: 10px;
-        }
-
-        .inputBox span {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .inputBox input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        .select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .btn{
-            background-color: #5f3dad;
-            }
+            <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
+        </div>
         
+<style>
+.details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
 
-    </style>
+.inputBox {
+    margin-bottom: 10px;
+}
+
+.inputBox span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.btn{
+    background-color: #5f3dad;
+    }
+
+
+</style>
+
     <div class="details">
 
     <div class="inputBox">
