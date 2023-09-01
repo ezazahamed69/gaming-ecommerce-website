@@ -384,10 +384,11 @@ li{
     margin-top: 1rem;
 }
 
-.btn, .option-btn, .delete-btn {
+.btn, .option-btn, .delete-btn, .button-div {
     display: block;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
     background-color:blueviolet;
     color: white;
     font-size: 1.7rem;
@@ -397,7 +398,7 @@ li{
     margin-top: 1rem;
 }
 
-.btn:hover, .option-btn:hover, .delete-btn:hover{
+.btn:hover, .option-btn:hover, .delete-btn:hover, .button-div:hover{
     background-color: crimson;
     color: white;
 }

@@ -76,7 +76,7 @@ if(isset($_POST['order_btn'])){
             <p><b>Payment Mode : </b><span>".$method."</span> </p>
             
          </div>
-            <a href='shop.php' class='btn'>Done</a>
+            <a href='shop.php' class='button-div'>Done</a>
          </div>
       </div>
       ";
@@ -195,12 +195,10 @@ if(isset($_POST['order_btn'])){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="js/jquery-3.6.4.min.js"></script>
-
-    <script src="js/main.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="swiper-bundle.min.js"></script>
+    
 </body>
 
 </html>
