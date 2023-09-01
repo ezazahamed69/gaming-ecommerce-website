@@ -9,7 +9,7 @@
 
         <!-- <script defer src="./static/js/account_dropdown.js"></script>
         <script defer src="./static/js/burger_menu_dropdown.js"></script> -->
-
+        <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
         <title>Contact us</title>
         <!-- <link rel="stylesheet" href="./assets/css/navstyle.css"> -->
         <link rel="stylesheet" href="./assets/css/style.css">

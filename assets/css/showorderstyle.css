@@ -37,6 +37,7 @@ body {
   background-image: url("../images/Gamer-como.jpg");
   background-position: center;
   background-size:cover;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: white;
   font-family: var(--ff-oxanium);

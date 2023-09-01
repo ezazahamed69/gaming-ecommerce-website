@@ -15,6 +15,7 @@ include 'config.php';
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
     <title>Admin Dashboard</title>
   </head>
   <body>
@@ -62,27 +63,27 @@ include 'config.php';
         <tbody>
           <tr>
             <td>2023-09-01</td>
-            <td>Product A</td>
-            <td>5</td>
-            <td>$250</td>
+            <td>Elder Ring</td>
+            <td>40</td>
+            <td>$2600</td>
           </tr>
           <tr>
-            <td>2023-10-01</td>
-            <td>Product B</td>
-            <td>5</td>
-            <td>$250</td>
+            <td>2023-09-01</td>
+            <td>Atlas Fallen</td>
+            <td>35</td>
+            <td>$1750</td>
           </tr>
           <tr>
-            <td>2023-11-01</td>
-            <td>Product C</td>
-            <td>5</td>
-            <td>$250</td>
+            <td>2023-09-01</td>
+            <td>Hades</td>
+            <td>55</td>
+            <td>$1375</td>
           </tr>
           <tr>
-            <td>2023-10-01</td>
-            <td>Product D</td>
-            <td>5</td>
-            <td>$250</td>
+            <td>2023-09-01</td>
+            <td>Forza Horizon</td>
+            <td>50</td>
+            <td>$2900</td>
           </tr>
          
         </tbody>
