@@ -19,6 +19,7 @@ $result=mysqli_query($conn, $statement);
 <?php
     include 'adminnavbar.php';
 ?>
+
 <?php
 echo "<h2>Recent Orders</h2>";
 
