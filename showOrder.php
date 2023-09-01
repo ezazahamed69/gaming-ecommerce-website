@@ -22,7 +22,7 @@ $result=mysqli_query($conn, $statement);
 ?>
 
 <?php
-echo "<h2>Recent Orders</h2>";
+echo "<h3>Recent Orders</h3>";
 
 echo "<table>";
 echo "<tr>

@@ -60,14 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<div class="container-fluid py-3">
-
-    <header class="text-left">
-        
-    <h2 class="display-6">Add A Product</h2>
-        
-    </header>
-    </div>
+    
+    <h2><b>Add A Product</b></h2>
     <section class="container glass my-2 w-50 text-light p-2">
         <div class="text-center">
         <form action="addProduct.php" method="post" enctype="multipart/form-data">

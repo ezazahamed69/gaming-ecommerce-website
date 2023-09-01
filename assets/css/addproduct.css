@@ -42,14 +42,17 @@ body {
     color: white;
     font-family: var(--ff-oxanium);
 }
-header{
-    padding-left: 130px;
+h2{
+    font-size: 35px;
+    color:azure;
+    text-align: left;
+    padding-left: 10px;
 }
  form{
    
     padding: 3px;
  }
-
+ 
 .container{
     width: 1320px;
     margin: 0 auto;

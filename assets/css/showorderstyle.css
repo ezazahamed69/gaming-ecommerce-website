@@ -53,10 +53,11 @@ table {
     -webkit-backdrop-filter: blur(20px);
   }
   
-h2{
-    font-size: 55px;
-    text-align: center;
-    background-image: url(../images/showorder.jpg);
+h3{
+    font-size: 35px;
+    color:azure;
+    text-align: left;
+    padding-left: 10px;
 
   }
 

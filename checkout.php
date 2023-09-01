@@ -169,7 +169,7 @@ if(isset($_POST['order_btn'])){
         <span>Payment method</span>
         <select name="method">
             <option value="cash on delivery" selected>Cash On Devlivery</option>
-            <option value="credit cart">Credit Cart</option>
+            <option value="credit card">Credit Card</option>
             <option value="paypal">Paypal</option>
             <option value="bkash">Bkash</option>
             <option value="nagad">Nagad</option>

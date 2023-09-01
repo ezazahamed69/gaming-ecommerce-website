@@ -6,8 +6,8 @@
 
 nav {
   text-align: center;
-  background-color: black;
-  padding: 20px;
+  background-color: rgb(39, 3, 63);
+  padding: 10px;
 }
 
 nav ul {
@@ -30,7 +30,7 @@ nav ul li a {
   font-size: 20px;
 }
 nav ul form input[type=submit]{
-background-color: black;
+background-color: rgb(39, 3, 63);
 border: none;
 color: white;
 padding: 10;
