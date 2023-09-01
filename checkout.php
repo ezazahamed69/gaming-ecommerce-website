@@ -114,34 +114,6 @@ if(isset($_POST['order_btn'])){
       
                     <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
                 </div>
-
-                <!-- <div class="details">
-            
-                    <div class="inputBox">
-                        <span>Name</span>
-                        <input type="text" placeholder="Full Name" name="name" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>number</span>
-                        <input type="number" placeholder="Contact Number" name="number" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>email</span>
-                        <input type="email" placeholder="Email Address" name="email" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>payment method</span>
-                        <select name="method">
-                            <option value="cash on delivery" selected>Cash On Devlivery</option>
-                            <option value="credit cart">Credit Cart</option>
-                            <option value="paypal">Paypal</option>
-                        </select>
-                    </div>
-                    <div class="inputBox">
-                        <span>Address </span>
-                        <input type="text" placeholder="Delivery Address" name="address" required>
-                    </div>
-                </div> -->
                 
     <style>
         .details {
